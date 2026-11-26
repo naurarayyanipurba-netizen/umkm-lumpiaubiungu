@@ -1,1 +1,552 @@
+/* =========================================
+   VARIABEL & RESET DASAR
+   ========================================= */
+:root {
+    --primary-pink: #d63384;
+    --light-pink: #fff0f5;
+    --accent-purple: #6f42c1;
+    --dark-text: #2c2c2c;
+    --body-bg: #fff9fb;
+    --white: #ffffff;
+    --transition: all 0.3s ease-in-out;
+}
 
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--dark-text);
+    overflow-x: hidden;
+    padding-top: 76px;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand, .hero-title span, .section-heading h2 span {
+    font-family: 'Playfair Display', serif;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(214, 51, 132, 0.08);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-pink) !important;
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-text) !important;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-pink) !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   TOMBOL
+   ========================================= */
+.btn-pink {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-pink);
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+    transition: var(--transition);
+}
+
+.btn-pink:hover {
+    background-color: #b0236c;
+    border-color: #b0236c;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.4);
+}
+
+.btn-outline-pink {
+    background-color: transparent;
+    color: var(--primary-pink);
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-pink);
+    transition: var(--transition);
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+    padding: 5rem 0 3rem;
+    background: linear-gradient(135deg, #fff0f5 0%, #fce4ec 100%);
+    position: relative;
+}
+
+.hero-label, .section-label {
+    display: inline-block;
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    border: 1px dashed var(--primary-pink);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    color: var(--primary-pink);
+}
+
+.hero-logo img {
+    max-width: 140px;
+    height: auto;
+    margin: 1rem 0 1.5rem;
+    filter: drop-shadow(0 8px 15px rgba(214, 51, 132, 0.15));
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-note {
+    font-size: 0.9rem;
+    color: var(--primary-pink);
+    font-weight: 600;
+}
+
+/* =========================================
+   PINK STRIP
+   ========================================= */
+.pink-strip {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    text-align: center;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   SECTION GENERAL
+   ========================================= */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-heading h2 span {
+    color: var(--primary-pink);
+}
+
+.section-heading p {
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   PRODUCT SECTION & FOTO MIRING (SKEW)
+   ========================================= */
+.product-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border: 1px solid #fce4ec;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.12);
+}
+
+.product-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    background-color: #fce4ec;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+    z-index: 3;
+    letter-spacing: 1px;
+}
+
+/* PENGATURAN FOTO FULL MIRING SESUAI TATA LETAK */
+.product-image-skew {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Membuat foto tertutup penuh (full) */
+    transform: rotate(3deg) scale(1.08); /* Efek miring sedikit dan diperbesar agar tidak ada sisa pinggiran kosong */
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image-skew {
+    transform: rotate(0deg) scale(1.12); /* Kembali lurus dan nge-zoom halus saat kursor diarahkan */
+}
+
+.product-body {
+    padding: 1.8rem;
+}
+
+.product-category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.product-body h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.product-body p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #fce4ec;
+    padding-top: 1rem;
+}
+
+.product-footer strong {
+    font-size: 1.25rem;
+    color: var(--primary-pink);
+}
+
+.btn-order {
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+    border: none;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.btn-order:hover {
+    background-color: var(--primary-pink);
+    color: var(--white);
+}
+
+/* =========================================
+   TENTANG KAMI
+   ========================================= */
+.about-section {
+    background-color: var(--white);
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.about-feature {
+    background-color: var(--body-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #fce4ec;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.about-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.08);
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-feature h5 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-feature p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* =========================================
+   PROMOSI / CTA
+   ========================================= */
+.cta-section {
+    padding: 3rem 0;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, #fff0f5 0%, #fce4ec 100%);
+    border-radius: 25px;
+    padding: 3.5rem 2rem;
+    border: 2px dashed var(--primary-pink);
+}
+
+.cta-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 1rem 0 0.8rem;
+}
+
+.cta-card h2 span {
+    color: var(--primary-pink);
+}
+
+.cta-card p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   KONTAK
+   ========================================= */
+.contact-section {
+    background-color: var(--white);
+}
+
+.contact-card {
+    background-color: var(--body-bg);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    border: 1px solid #fce4ec;
+    height: 100%;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.08);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-pink);
+    color: var(--primary-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.2rem;
+}
+
+.contact-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.contact-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-detail {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+}
+
+.btn-contact {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-contact:hover {
+    background-color: #b0236c;
+    color: var(--white);
+}
+
+.operating-hours {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #fce4ec;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #fce4ec;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-note {
+    font-size: 0.85rem;
+    color: var(--primary-pink);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background-color: #2c2c2c;
+    color: #aaa;
+    padding: 3rem 0 2rem;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #444;
+    max-width: 300px;
+    margin: 1.5rem auto;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+
+/* =========================================
+   BACK TO TOP & FLOATING HEARTS
+   ========================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #b0236c;
+    transform: translateY(-3px);
+}
+
+/* Floating Heart Animation container */
+#heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
